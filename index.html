@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Preferred Customs — Handcrafted custom die-cast model police and fire emergency vehicles. Based in Hilliard, Ohio. Custom commissions built to order, plus ready-to-ship models." />
+  <title>Preferred Customs — Hilliard, Ohio | Custom Model Emergency Vehicles</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:   #0f1921;
+      --charcoal:#17232D;
+      --steel:   #1f2f3b;
+      --red:     #B84A3A;
+      --red-hot: #e07562;
+      --gold:    #B8C1C9;
+      --amber:   #d9dfe4;
+      --white:   #F4F3EF;
+      --grey:    #aab4bd;
+      --light:   #e6e8e8;
+      --radius:  8px;
+      --shadow:  0 4px 24px rgba(0,0,0,.45);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      background: var(--charcoal);
+      color: var(--white);
+      line-height: 1.65;
+    }
+
+    img { display: block; max-width: 100%; }
+    a   { color: inherit; text-decoration: none; }
+
+    /* ── UTILITY ── */
+    .container  { max-width: 1160px; margin: 0 auto; padding: 0 1.5rem; }
+    .section    { padding: 5rem 1.5rem; }
+
+    h2.section-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--white);
+      margin-bottom: .35rem;
+    }
+    h2.section-title span { color: var(--red-hot); }
+
+    .section-rule {
+      width: 56px;
+      height: 4px;
+      background: var(--red);
+      margin-bottom: 1.2rem;
+    }
+
+    .section-intro {
+      font-size: 1rem;
+      color: var(--grey);
+      max-width: 620px;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: .85rem 2rem;
+      border-radius: var(--radius);
+      font-family: 'Oswald', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: none;
+      transition: opacity .2s, transform .15s;
+    }
+    .btn:hover { opacity: .88; transform: translateY(-2px); }
+    .btn-red    { background: var(--red);   color: var(--white); }
+    .btn-outline{ background: transparent; color: var(--white); border: 2px solid var(--white); }
+    .btn-gold   { background: var(--gold);  color: var(--black); }
+    .btn:focus-visible, .filter-btn:focus-visible, .gallery-item:focus-visible, .nav-links a:focus-visible, .lb-arrow:focus-visible, .lb-close:focus-visible, .view-btn:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+
+    /* ── ANNOUNCEMENT BAR ── */
+    .announcement {
+      background: var(--red);
+      text-align: center;
+      padding: .55rem 1rem;
+      font-size: .85rem;
+      font-weight: 600;
+      letter-spacing: .3px;
+      color: var(--white);
+    }
+    .announcement strong { color: var(--amber); }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--black);
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      border-bottom: 3px solid var(--red);
+    }
+    .nav-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: .9rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+    }
+    .nav-brand .brand-mark {
+      height: 46px;
+      width: 46px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      border: 2px solid var(--red);
+      background: var(--steel);
+    }
+    .nav-brand-name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: .5px;
+      line-height: 1.1;
+    }
+    .nav-brand-name span { color: var(--red-hot); }
+    .nav-brand-sub {
+      font-size: .72rem;
+      color: var(--grey);
+      letter-spacing: .5px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: .25rem;
+    }
+    .nav-links a {
+      color: var(--light);
+      font-family: 'Oswald', sans-serif;
+      font-size: .92rem;
+      font-weight: 600;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      padding: .5rem .9rem;
+      border-radius: 5px;
+      transition: color .15s, background .15s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover { background: var(--red); color: var(--white); }
+    .nav-links a.nav-ext { border: 1px solid #3a4f5e; }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: .4rem;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 26px;
+      height: 3px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: transform .2s, opacity .2s;
+    }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    @media (max-width: 900px) {
+      .nav-toggle { display: flex; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0; right: 0;
+        background: var(--black);
+        flex-direction: column;
+        padding: 1rem 1.5rem 1.5rem;
+        border-top: 1px solid #2f4351;
+        box-shadow: 0 10px 30px rgba(0,0,0,.6);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: .75rem 1rem; font-size: 1.05rem; }
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--black);
+      position: relative;
+      overflow: hidden;
+      padding: 6rem 1.5rem 5rem;
+      text-align: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -55deg,
+        transparent,
+        transparent 40px,
+        rgba(184,74,58,.04) 40px,
+        rgba(184,74,58,.04) 80px
+      );
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 200px;
+      background: radial-gradient(ellipse, rgba(184,74,58,.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid var(--red);
+      margin: 0 auto 1.75rem;
+      background: var(--steel);
+      box-shadow: 0 0 0 8px rgba(184,74,58,.2), 0 0 40px rgba(184,74,58,.3);
+      position: relative;
+    }
+    .hero-eyebrow {
+      font-family: 'Oswald', sans-serif;
+      font-size: .85rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--red-hot);
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    .hero h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1.05;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1.25rem;
+      position: relative;
+    }
+    .hero h1 span { color: var(--red-hot); }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: var(--grey);
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      position: relative;
+    }
+    .hero-sub strong { color: var(--light); }
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    /* ── STRIPE ── */
+    .stripe {
+      height: 8px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--red)     0px 30px,
+        var(--black)   30px 60px,
+        var(--gold)    60px 90px,
+        var(--black)   90px 120px
+      );
+    }
+
+    /* ── PRIDE BAR ── */
+    .pride-bar {
+      background: var(--steel);
+      padding: 2rem 1.5rem;
+      border-bottom: 1px solid #2f4351;
+    }
+    .pride-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .pride-item { text-align: center; }
+    .pride-num {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--red-hot);
+      line-height: 1;
+    }
+    .pride-label {
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--grey);
+      margin-top: .2rem;
+    }
+    .pride-divider { width: 1px; height: 50px; background: #3a4f5e; }
+    @media (max-width: 500px) { .pride-divider { display: none; } }
+
+    /* ── GALLERY ── */
+    #gallery { background: var(--charcoal); }
+
+    .filter-bar {
+      display: flex;
+      gap: .5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .filter-btn {
+      padding: .5rem 1.2rem;
+      border-radius: 4px;
+      border: 1px solid #3a4f5e;
+      background: transparent;
+      color: var(--grey);
+      font-family: 'Oswald', sans-serif;
+      font-size: .9rem;
+      font-weight: 600;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all .15s;
+    }
+    .filter-btn:hover { border-color: var(--red); color: var(--white); }
+    .filter-btn.active { background: var(--red); border-color: var(--red); color: var(--white); }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 1.25rem;
+    }
+    .gallery-item {
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--steel);
+      border: 1px solid #2f4351;
+      cursor: pointer;
+      transition: border-color .2s, transform .2s, box-shadow .2s;
+    }
+    .gallery-item:hover {
+      border-color: var(--red);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 32px rgba(184,74,58,.3);
+    }
+    .gallery-item.hidden { display: none; }
+    .gallery-item img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      transition: transform .3s;
+    }
+    .gallery-item:hover img { transform: scale(1.03); }
+    .gallery-caption {
+      padding: .65rem 1rem .75rem;
+      background: var(--steel);
+      border-top: 2px solid var(--red);
+    }
+    .gallery-badge {
+      display: inline-block;
+      font-size: .68rem;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      padding: .15rem .6rem;
+      border-radius: 3px;
+      margin-bottom: .3rem;
+    }
+    .badge-diamond { background: rgba(59,130,246,.2); color: #93c5fd; }
+    .badge-police  { background: rgba(234,179,8,.15);  color: #fcd34d; }
+    .badge-miami   { background: rgba(34,197,94,.15);  color: #86efac; }
+    .badge-fire    { background: rgba(184,74,58,.25);  color: #fca5a5; }
+
+    .caption-name {
+      font-size: .9rem;
+      font-weight: 600;
+      color: var(--light);
+      display: block;
+    }
+    .gallery-hint { text-align: center; font-size: .85rem; color: #8d99a3; margin-top: 1.5rem; }
+
+    /* ── LIGHTBOX ── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.95);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      padding: 1.5rem;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-img-wrap {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      max-width: 90vw;
+    }
+    .lightbox-img-wrap img {
+      max-width: 78vw;
+      max-height: 74vh;
+      border-radius: 8px;
+      object-fit: contain;
+      border: 2px solid #2f4351;
+    }
+    .lb-arrow {
+      background: rgba(255,255,255,.08);
+      border: 1px solid #3a4f5e;
+      color: #fff;
+      font-size: 1.6rem;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .lb-arrow:hover { background: var(--red); border-color: var(--red); }
+    .lb-caption  { color: var(--light); font-size: 1rem; font-weight: 600; text-align: center; }
+    .lb-counter  { font-size: .8rem; color: #8d99a3; }
+    .lb-close {
+      background: var(--red);
+      color: var(--white);
+      font-family: 'Oswald', sans-serif;
+      font-size: .95rem;
+      font-weight: 600;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      padding: .6rem 2rem;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+    }
+    .lb-close:hover { background: var(--red-hot); }
+
+    /* ── MULTI-VIEW GALLERY ENTRIES ── */
+    .gallery-item .alt-img { display: none; }
+    .views-tag { font-size: .68rem; font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: .5px; color: var(--grey); margin-left: .4rem; }
+    .lb-views { display: flex; gap: .5rem; flex-wrap: wrap; justify-content: center; }
+    .lb-views:empty { display: none; }
+    .view-btn { padding: .4rem 1rem; border-radius: 4px; border: 1px solid #3a4f5e; background: transparent; color: var(--grey); font-family: 'Oswald', sans-serif; font-size: .85rem; text-transform: uppercase; letter-spacing: .5px; cursor: pointer; }
+    .view-btn.active { background: var(--red); border-color: var(--red); color: var(--white); }
+
+    /* ── SHOP BAND (Etsy) ── */
+    #shop { background: var(--black); }
+    .shop-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 800px) { .shop-grid { grid-template-columns: 1fr; } }
+    .shop-card {
+      background: var(--steel);
+      border: 1px solid #2f4351;
+      border-top: 4px solid var(--red);
+      border-radius: var(--radius);
+      padding: 2rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .shop-card h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin-bottom: .5rem;
+    }
+    .shop-card p { font-size: .93rem; color: var(--grey); margin-bottom: 1.1rem; }
+    .shop-card ul { list-style: none; margin-bottom: 1.5rem; }
+    .shop-card li {
+      font-size: .9rem;
+      color: var(--light);
+      padding-left: 1.4rem;
+      position: relative;
+      margin-bottom: .45rem;
+    }
+    .shop-card li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--red-hot);
+    }
+    .shop-card .btn { margin-top: auto; align-self: flex-start; }
+    .shop-note {
+      font-size: .82rem;
+      color: #8d99a3;
+      margin-top: 1.75rem;
+      text-align: center;
+    }
+
+    /* ── HOW TO ORDER ── */
+    #order { background: var(--charcoal); }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .step {
+      background: var(--steel);
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem;
+      border: 1px solid #2f4351;
+      border-top: 4px solid var(--red);
+      position: relative;
+    }
+    .step-num {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: rgba(184,74,58,.2);
+      line-height: 1;
+      position: absolute;
+      top: 1rem;
+      right: 1.25rem;
+    }
+    .step h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      color: var(--white);
+      margin-bottom: .6rem;
+    }
+    .step p { font-size: .9rem; color: var(--grey); }
+
+    /* ── EXPECT / FAQ ── */
+    #expect { background: var(--charcoal); }
+    .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem; }
+    .faq-item { background: var(--steel); border: 1px solid #2f4351; border-left: 4px solid var(--red); border-radius: var(--radius); padding: 1.4rem 1.5rem; }
+    .faq-item h3 { font-family: 'Oswald', sans-serif; font-size: 1.05rem; text-transform: uppercase; letter-spacing: .5px; margin-bottom: .45rem; }
+    .faq-item p { font-size: .92rem; color: var(--grey); }
+    .order-note { margin-top: 1.75rem; font-size: .92rem; color: var(--grey); text-align: center; }
+    .form-fieldset-title { font-family: 'Oswald', sans-serif; font-size: .8rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--red-hot); margin-top: .5rem; }
+    .form-error { display: none; background: rgba(184,74,58,.15); border: 1px solid rgba(184,74,58,.5); border-radius: 6px; padding: 1rem; color: #f3b9ae; font-size: .9rem; text-align: center; }
+    .what-next { background: var(--charcoal); border: 1px solid #2f4351; border-radius: 6px; padding: .9rem 1rem; font-size: .88rem; color: var(--grey); }
+    .what-next strong { color: var(--light); display: block; margin-bottom: .2rem; }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--charcoal); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    @media (max-width: 720px) { .contact-grid { grid-template-columns: 1fr; } }
+
+    .contact-info h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: .75rem;
+    }
+    .contact-info p  { font-size: .95rem; color: var(--grey); margin-bottom: 1.5rem; line-height: 1.7; }
+
+    .contact-detail { display: flex; align-items: flex-start; gap: .85rem; margin-bottom: 1.1rem; }
+    .contact-icon   { font-size: 1.3rem; flex-shrink: 0; margin-top: .1rem; }
+    .contact-detail-text strong { display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: 1px; color: var(--red-hot); margin-bottom: .15rem; }
+    .contact-detail-text span   { font-size: .95rem; color: var(--light); }
+
+    .contact-form-wrap {
+      background: var(--steel);
+      border: 1px solid #383838;
+      border-radius: var(--radius);
+      padding: 2rem;
+    }
+    .form-heading {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+      padding-bottom: .75rem;
+      border-bottom: 1px solid #3a4f5e;
+    }
+    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+    .form-row     { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
+
+    .contact-form label {
+      font-size: .75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      color: var(--grey);
+      display: block;
+      margin-bottom: .35rem;
+    }
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: .75rem 1rem;
+      border: 1px solid #3a4f5e;
+      border-radius: 6px;
+      font-size: .95rem;
+      font-family: 'Inter', sans-serif;
+      color: var(--white);
+      background: var(--charcoal);
+      transition: border-color .15s;
+      outline: none;
+    }
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder { color: #7b8791; }
+    .contact-form select option { background: var(--charcoal); }
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus { border-color: var(--red); }
+    .contact-form textarea { resize: vertical; min-height: 110px; }
+
+    .form-success {
+      display: none;
+      background: rgba(34,197,94,.1);
+      border: 1px solid rgba(34,197,94,.3);
+      border-radius: 6px;
+      padding: 1rem;
+      color: #86efac;
+      font-size: .9rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--black);
+      border-top: 3px solid var(--red);
+      color: #8d99a3;
+      text-align: center;
+      padding: 2.25rem 1.5rem;
+      font-size: .85rem;
+    }
+    .footer-brand {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: .5px;
+      margin-bottom: .4rem;
+    }
+    .footer-brand span { color: var(--red-hot); }
+    footer p { margin-top: .3rem; }
+    footer a { color: var(--light); text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<!-- ── ANNOUNCEMENT BAR ── -->
+<div class="announcement">
+  Custom-built in Ohio &nbsp;·&nbsp; <strong>Ready-to-ship models on Etsy</strong> &nbsp;·&nbsp; U.S. shipping
+</div>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="#">
+      <!-- Inline monogram so nothing breaks if logo.svg is missing.
+           Swap this <svg> for <img src="logo.svg" alt="Preferred Customs Logo" /> when you have a logo. -->
+      <svg class="brand-mark" viewBox="0 0 100 100" role="img" aria-label="Preferred Customs logo">
+        <circle cx="50" cy="50" r="48" fill="#1f2f3b" stroke="#B84A3A" stroke-width="4"/>
+        <text x="50" y="62" text-anchor="middle" font-family="Oswald, sans-serif" font-size="38" font-weight="700" fill="#F4F3EF">PC</text>
+      </svg>
+      <div class="nav-brand-text">
+        <div class="nav-brand-name">Preferred <span>Customs</span></div>
+        <div class="nav-brand-sub">Hilliard, Ohio</div>
+      </div>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#order">How It Works</a></li>
+      <li><a href="#expect">What to Expect</a></li>
+      <li><a href="#contact">Custom Builds</a></li>
+      <!-- TODO: replace YOURSHOPNAME with your real Etsy shop name -->
+      <li><a class="nav-ext" href="https://www.etsy.com/shop/YOURSHOPNAME" target="_blank" rel="noopener">Etsy Shop ↗</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+  <svg class="hero-logo" viewBox="0 0 100 100" role="img" aria-label="Preferred Customs">
+    <circle cx="50" cy="50" r="47" fill="#1f2f3b"/>
+    <text x="50" y="63" text-anchor="middle" font-family="Oswald, sans-serif" font-size="40" font-weight="700" fill="#F4F3EF">PC</text>
+  </svg>
+  <p class="hero-eyebrow">Hilliard, Ohio &nbsp;·&nbsp; Built to Honor Those Who Serve</p>
+  <h1>Custom Emergency<br><span>Vehicle Models</span></h1>
+  <p class="hero-sub">
+    Handcrafted die-cast police and fire vehicle models, customized with the markings, colors, and details that make each vehicle unique. From department-specific cruisers to one-of-a-kind collector pieces, every build gets individual attention from our workshop in <strong>Hilliard, Ohio</strong>.
+  </p>
+  <div class="hero-btns">
+    <a href="#gallery" class="btn btn-red">Explore the Gallery</a>
+    <a href="#contact" class="btn btn-outline">Request a Custom Build</a>
+  </div>
+</section>
+
+<div class="stripe"></div>
+
+<!-- ═══════════════ PRIDE BAR ═══════════════ -->
+<div class="pride-bar">
+  <div class="pride-inner">
+    <div class="pride-item">
+      <div class="pride-num">100%</div>
+      <div class="pride-label">Handcrafted</div>
+    </div>
+    <div class="pride-divider"></div>
+    <div class="pride-item">
+      <div class="pride-num">50+</div>
+      <div class="pride-label">Models Built</div>
+    </div>
+    <div class="pride-divider"></div>
+    <div class="pride-item">
+      <div class="pride-num">OH</div>
+      <div class="pride-label">Based in Hilliard</div>
+    </div>
+    <div class="pride-divider"></div>
+    <div class="pride-item">
+      <div class="pride-num">US</div>
+      <div class="pride-label">Ships Nationwide</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ GALLERY ═══════════════ -->
+<section id="gallery" class="section">
+  <div class="container">
+    <h2 class="section-title">The <span>Gallery</span></h2>
+    <div class="section-rule"></div>
+    <p class="section-intro">Explore completed builds, custom details, and inspiration for your own project. Every model has its own story, so browse the collections, tap a photo to enlarge it, then tell us about your ideal build.</p>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all" aria-pressed="true">All Models</button>
+      <button class="filter-btn" data-filter="police" aria-pressed="false">Police &amp; EMS</button>
+      <button class="filter-btn" data-filter="miami" aria-pressed="false">Miami-Dade</button>
+      <button class="filter-btn" data-filter="diamond" aria-pressed="false">Diamond Series</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+
+      <!-- MIAMI-DADE -->
+      <div class="gallery-item" data-category="miami" data-caption="Miami-Dade Police — Dodge Charger">
+        <img src="Miami_Dade_Pics/P1010001.JPG" alt="Miami-Dade Police Dodge Charger" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-miami">Miami-Dade</span>
+          <span class="caption-name">Miami-Dade Police — Dodge Charger</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="miami" data-caption="Miami-Dade Series — No. 2">
+        <img src="Miami_Dade_Pics/P1010002.JPG" alt="Miami-Dade Series 2" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-miami">Miami-Dade</span>
+          <span class="caption-name">Miami-Dade Series — No. 2</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="miami" data-caption="Miami-Dade Series — No. 3">
+        <img src="Miami_Dade_Pics/P1010003.JPG" alt="Miami-Dade Series 3" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-miami">Miami-Dade</span>
+          <span class="caption-name">Miami-Dade Series — No. 3</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="miami" data-caption="Miami-Dade Series — No. 4">
+        <img src="Miami_Dade_Pics/P1010004.JPG" alt="Miami-Dade Series 4" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-miami">Miami-Dade</span>
+          <span class="caption-name">Miami-Dade Series — No. 4</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="miami" data-caption="Miami-Dade Series — No. 5">
+        <img src="Miami_Dade_Pics/P1010005.JPG" alt="Miami-Dade Series 5" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-miami">Miami-Dade</span>
+          <span class="caption-name">Miami-Dade Series — No. 5</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="miami" data-caption="Miami-Dade Series — No. 6">
+        <img src="Miami_Dade_Pics/P1010006.JPG" alt="Miami-Dade Series 6" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-miami">Miami-Dade</span>
+          <span class="caption-name">Miami-Dade Series — No. 6</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="miami" data-caption="Miami-Dade Series — No. 7">
+        <img src="Miami_Dade_Pics/P1010007.JPG" alt="Miami-Dade Series 7" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-miami">Miami-Dade</span>
+          <span class="caption-name">Miami-Dade Series — No. 7</span>
+        </div>
+      </div>
+
+      <!-- POLICE & EMS -->
+      <div class="gallery-item" data-category="police" data-caption="CPD Series — No. 1">
+        <img src="CPD%201.JPG" alt="CPD Series 1" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-police">Police</span>
+          <span class="caption-name">CPD Series — No. 1</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="police" data-caption="CPD Series — No. 2">
+        <img src="CPD%202.JPG" alt="CPD Series 2" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-police">Police</span>
+          <span class="caption-name">CPD Series — No. 2</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="police" data-caption="Chevy Caprice — L09">
+        <img src="PC%20-%20Chevy%20Caprise%20L09.JPG" alt="Chevy Caprice L09" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-police">Police</span>
+          <span class="caption-name">Chevy Caprice — L09</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="police" data-caption="Ford Interceptor — Unit 664">
+        <img src="PC%20-%20Interceptor%20664.JPG" alt="Ford Interceptor 664" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-police">Police</span>
+          <span class="caption-name">Ford Interceptor — Unit 664</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="police" data-caption="Ford Interceptor — Unit 81">
+        <img src="PC%20-%20Interceptor%2081.JPG" alt="Ford Interceptor 81" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-police">Police</span>
+          <span class="caption-name">Ford Interceptor — Unit 81</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="police" data-caption="Police Cruiser PC01">
+        <img src="PC01%20Driver.jpg" alt="Police Cruiser PC01, driver side" data-label="Driver side" loading="lazy" />
+        <img class="alt-img" src="PC01%20Passenger.jpg" alt="Police Cruiser PC01, passenger side" data-label="Passenger side" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-police">Police</span><span class="views-tag">2 views</span>
+          <span class="caption-name">Police Cruiser PC01</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="police" data-caption="Police Cruiser PC02">
+        <img src="PC02%20Driver.jpg" alt="Police Cruiser PC02, driver side" data-label="Driver side" loading="lazy" />
+        <img class="alt-img" src="PC02%20Passenger.jpg" alt="Police Cruiser PC02, passenger side" data-label="Passenger side" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-police">Police</span><span class="views-tag">2 views</span>
+          <span class="caption-name">Police Cruiser PC02</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="police" data-caption="Police Cruiser PC03">
+        <img src="PC03%20Driver.jpg" alt="Police Cruiser PC03, driver side" data-label="Driver side" loading="lazy" />
+        <img class="alt-img" src="PC03%20Passenger.jpg" alt="Police Cruiser PC03, passenger side" data-label="Passenger side" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-police">Police</span><span class="views-tag">2 views</span>
+          <span class="caption-name">Police Cruiser PC03</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="police" data-caption="Police Cruiser PC05">
+        <img src="PC05%20Driver.jpg" alt="Police Cruiser PC05, driver side" data-label="Driver side" loading="lazy" />
+        <img class="alt-img" src="PC05%20Passenger.jpg" alt="Police Cruiser PC05, passenger side" data-label="Passenger side" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-police">Police</span><span class="views-tag">2 views</span>
+          <span class="caption-name">Police Cruiser PC05</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="police" data-caption="Custom Police Cruiser — No. 1">
+        <img src="P1010001.JPG" alt="Custom Police Cruiser 1" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-police">Police &amp; EMS</span>
+          <span class="caption-name">Custom Police Cruiser — No. 1</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="police" data-caption="Custom Police Cruiser — No. 2">
+        <img src="P1010002.JPG" alt="Custom Police Cruiser 2" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-police">Police &amp; EMS</span>
+          <span class="caption-name">Custom Police Cruiser — No. 2</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="police" data-caption="Custom Emergency Vehicle — No. 3">
+        <img src="P1010003.JPG" alt="Custom Emergency Vehicle 3" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-police">Police &amp; EMS</span>
+          <span class="caption-name">Custom Emergency Vehicle — No. 3</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="police" data-caption="Custom Emergency Vehicle — No. 5">
+        <img src="P1010005.JPG" alt="Custom Emergency Vehicle 5" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-police">Police &amp; EMS</span>
+          <span class="caption-name">Custom Emergency Vehicle — No. 5</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="police" data-caption="Custom Emergency Vehicle — No. 8">
+        <img src="P1010008.JPG" alt="Custom Emergency Vehicle 8" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-police">Police &amp; EMS</span>
+          <span class="caption-name">Custom Emergency Vehicle — No. 8</span>
+        </div>
+      </div>
+
+      <!-- DIAMOND SERIES -->
+      <div class="gallery-item" data-category="diamond" data-caption="Diamond Series — No. 1">
+        <img src="Diamond_Series/DS%20-%201.jpg" alt="Diamond Series 1" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-diamond">Diamond Series</span>
+          <span class="caption-name">Diamond Series — No. 1</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="diamond" data-caption="Diamond Series — No. 2">
+        <img src="Diamond_Series/DS%20-%202.jpg" alt="Diamond Series 2" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-diamond">Diamond Series</span>
+          <span class="caption-name">Diamond Series — No. 2</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="diamond" data-caption="Diamond Series — No. 3">
+        <img src="Diamond_Series/DS%20-%203.jpg" alt="Diamond Series 3" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-diamond">Diamond Series</span>
+          <span class="caption-name">Diamond Series — No. 3</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="diamond" data-caption="Diamond Series — No. 4">
+        <img src="Diamond_Series/DS%20-%204.jpg" alt="Diamond Series 4" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-diamond">Diamond Series</span>
+          <span class="caption-name">Diamond Series — No. 4</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="diamond" data-caption="Diamond Series — No. 5">
+        <img src="Diamond_Series/DS%20-%205.jpg" alt="Diamond Series 5" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-diamond">Diamond Series</span>
+          <span class="caption-name">Diamond Series — No. 5</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="diamond" data-caption="Diamond Series — No. 6">
+        <img src="Diamond_Series/DS%20-%206.jpg" alt="Diamond Series 6" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-diamond">Diamond Series</span>
+          <span class="caption-name">Diamond Series — No. 6</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="diamond" data-caption="Diamond Series — No. 8">
+        <img src="Diamond_Series/DS%20-%208.jpg" alt="Diamond Series 8" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-diamond">Diamond Series</span>
+          <span class="caption-name">Diamond Series — No. 8</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="diamond" data-caption="Diamond Series — No. 10">
+        <img src="Diamond_Series/DS%20-%2010.jpg" alt="Diamond Series 10" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-diamond">Diamond Series</span>
+          <span class="caption-name">Diamond Series — No. 10</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="diamond" data-caption="Diamond Series — No. 11">
+        <img src="Diamond_Series/DS%20-%2011.jpg" alt="Diamond Series 11" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-diamond">Diamond Series</span>
+          <span class="caption-name">Diamond Series — No. 11</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="diamond" data-caption="Diamond Series — No. 12">
+        <img src="Diamond_Series/DS%20-%2012.jpg" alt="Diamond Series 12" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-diamond">Diamond Series</span>
+          <span class="caption-name">Diamond Series — No. 12</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="diamond" data-caption="Diamond Series — No. 13">
+        <img src="Diamond_Series/DS%20-%2013.jpg" alt="Diamond Series 13" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-diamond">Diamond Series</span>
+          <span class="caption-name">Diamond Series — No. 13</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-category="diamond" data-caption="Diamond Series — No. 14">
+        <img src="Diamond_Series/DS%20-%2014.jpg" alt="Diamond Series 14" loading="lazy" />
+        <div class="gallery-caption">
+          <span class="gallery-badge badge-diamond">Diamond Series</span>
+          <span class="caption-name">Diamond Series — No. 14</span>
+        </div>
+      </div>
+
+    </div><!-- /gallery-grid -->
+    <p class="gallery-hint">Click any photo to enlarge — use arrow keys or the buttons to browse.</p>
+  </div>
+</section>
+
+<div class="stripe"></div>
+
+<!-- ═══════════════ TWO WAYS TO BUY (Etsy) ═══════════════ -->
+<section id="shop" class="section">
+  <div class="container">
+    <h2 class="section-title">Two Ways to <span>Buy</span></h2>
+    <div class="section-rule"></div>
+    <p class="section-intro">Custom commissions are handled directly so we can talk through the details. Finished, ready-to-ship models go up in our Etsy shop for simple, instant checkout.</p>
+
+    <div class="shop-grid">
+      <div class="shop-card">
+        <h3>Custom Commission</h3>
+        <p>Built to your department, your unit number, your livery — one at a time.</p>
+        <ul>
+          <li>Quote before any payment</li>
+          <li>Reference photos welcome</li>
+          <li>Deposit via PayPal, balance on completion</li>
+          <li>Typical turnaround confirmed with your quote</li>
+        </ul>
+        <a href="#contact" class="btn btn-red">Start a Build Request</a>
+      </div>
+
+      <div class="shop-card">
+        <h3>Ready-to-Ship on Etsy</h3>
+        <p>Completed builds that are boxed and ready to go right now. Buy in a couple of clicks.</p>
+        <ul>
+          <li>Fixed price, no waiting</li>
+          <li>Secure Etsy checkout &amp; buyer protection</li>
+          <li>Reviews from past buyers</li>
+          <li>Tracked shipping within the U.S.</li>
+        </ul>
+        <!-- TODO: replace YOURSHOPNAME with your real Etsy shop name -->
+        <a href="https://www.etsy.com/shop/YOURSHOPNAME" class="btn btn-gold" target="_blank" rel="noopener">Visit the Etsy Shop ↗</a>
+      </div>
+    </div>
+
+    <p class="shop-note">Don't see what you want on Etsy? That's normal — the good stuff is usually custom. Send a build request instead.</p>
+  </div>
+</section>
+
+<div class="stripe"></div>
+
+<!-- ═══════════════ HOW TO ORDER ═══════════════ -->
+<section id="order" class="section">
+  <div class="container">
+    <h2 class="section-title">How to <span>Order</span></h2>
+    <div class="section-rule"></div>
+    <p class="section-intro">From your idea to your finished model. Every project is different, so the details, price, and timeline are confirmed with you before work begins.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Share Your Idea</h3>
+        <p>Tell us the vehicle, department, unit number, preferred scale, and any special details. Reference photographs are welcome.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Review Your Quote</h3>
+        <p>We'll discuss feasibility, customization options, estimated cost, and expected turnaround before you commit.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Confirm Your Order</h3>
+        <p>Once the details and price are agreed, we'll explain the deposit (collected through PayPal), payment schedule, and next steps. The balance is due when the model is complete.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <h3>Complete &amp; Ship</h3>
+        <p>We finish your model, confirm completion, and ship it to your address anywhere in the United States.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ WHAT TO EXPECT ═══════════════ -->
+<section id="expect" class="section">
+  <div class="container">
+    <h2 class="section-title">What to <span>Expect</span></h2>
+    <div class="section-rule"></div>
+    <p class="section-intro">Straight answers before you spend anything.</p>
+    <div class="faq-grid">
+      <div class="faq-item"><h3>How much does it cost?</h3><p>Quotes depend on the vehicle, scale, complexity of the markings, and materials. You'll get a price before any deposit is requested.</p></div>
+      <div class="faq-item"><h3>How much is the deposit?</h3><p>The deposit amount is confirmed with your quote. Nothing is charged until you've agreed to the details.</p></div>
+      <div class="faq-item"><h3>How long will it take?</h3><p>Turnaround depends on the build. We'll give you a realistic estimate with your quote.</p></div>
+      <div class="faq-item"><h3>Can I approve the design?</h3><p>Yes, we'll talk through the details with you before work begins. Send reference photos to help us get the markings right.</p></div>
+      <div class="faq-item"><h3>What if something goes wrong?</h3><p>Cancellation, refund, and damage policies are explained when your quote is confirmed, so you know them before paying a deposit.</p></div>
+      <div class="faq-item"><h3>How is it shipped?</h3><p>Models are carefully packaged and shipped within the United States. Shipping charges and tracking are included in your quote discussion.</p></div>
+    </div>
+    <p class="order-note">Preferred Customs is an independent model builder and is not affiliated with, or endorsed by, any fire or police department.</p>
+  </div>
+</section>
+
+<div class="stripe"></div>
+
+<!-- ═══════════════ CONTACT ═══════════════ -->
+<section id="contact" class="section">
+  <div class="container">
+    <h2 class="section-title">Tell Us About Your <span>Custom Build</span></h2>
+    <div class="section-rule"></div>
+    <p class="section-intro">Have a vehicle in mind? Share a few details and we'll review your request. Submitting a request doesn't commit you to a purchase. We'll discuss scope, quote, and timeline before confirming an order.</p>
+
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <h3>Preferred Customs</h3>
+        <p>Every model is built by hand, one at a time, with attention to details like unit numbers and the exact shade of a department's livery.</p>
+
+        <div class="contact-detail">
+          <span class="contact-icon">📍</span>
+          <div class="contact-detail-text">
+            <strong>Location</strong>
+            <span>Hilliard, Ohio — near Columbus</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-icon">📧</span>
+          <div class="contact-detail-text">
+            <strong>Email</strong>
+            <span>preferredcustoms@email.com</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-icon">🛒</span>
+          <div class="contact-detail-text">
+            <strong>Etsy Shop</strong>
+            <!-- TODO: replace YOURSHOPNAME -->
+            <span><a href="https://www.etsy.com/shop/YOURSHOPNAME" target="_blank" rel="noopener" style="text-decoration:underline;">Ready-to-ship models ↗</a></span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-icon">📦</span>
+          <div class="contact-detail-text">
+            <strong>Shipping</strong>
+            <span>Nationwide — U.S. only</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-icon">💳</span>
+          <div class="contact-detail-text">
+            <strong>Payment</strong>
+            <span>PayPal — deposit once your quote is agreed, balance on completion</span>
+          </div>
+        </div>
+
+        <!-- TODO: replace YOURUSERNAME with your real PayPal.Me name -->
+        <a href="https://www.paypal.com/paypalme/YOURUSERNAME" class="btn btn-gold" target="_blank" rel="noopener" style="margin-top:1.25rem;">
+          Pay Deposit (after quote is agreed)
+        </a>
+      </div>
+
+      <div class="contact-form-wrap">
+        <div class="form-heading">Build Request</div>
+        <!-- TODO: replace YOUR_FORM_ID with your real Formspree form ID -->
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <div>
+              <label for="fname">First Name *</label>
+              <input type="text" id="fname" name="first_name" required placeholder="John" />
+            </div>
+            <div>
+              <label for="lname">Last Name *</label>
+              <input type="text" id="lname" name="last_name" required placeholder="Smith" />
+            </div>
+          </div>
+
+          <div>
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com" />
+          </div>
+
+          <div class="form-fieldset-title">Your project</div>
+          <div>
+            <label for="department">Department / Organization (optional)</label>
+            <input type="text" id="department" name="department" placeholder="e.g. Columbus Division of Fire, Station 12" />
+          </div>
+
+          <div>
+            <label for="vehicle">Vehicle Type</label>
+            <select id="vehicle" name="vehicle_type">
+              <option value="">— Select one —</option>
+              <option>Police Cruiser</option>
+              <option>Sheriff's Vehicle</option>
+              <option>Fire Engine / Pumper</option>
+              <option>Fire Ladder Truck</option>
+              <option>EMS / Medic Unit</option>
+              <option>Battalion / Chief's Vehicle</option>
+              <option>Other / Custom</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div>
+              <label for="scale">Preferred Scale (if known)</label>
+              <input type="text" id="scale" name="scale" placeholder="e.g. 1:64, 1:43, 1:24" />
+            </div>
+            <div>
+              <label for="unit">Unit Number / ID Details</label>
+              <input type="text" id="unit" name="unit_number" placeholder="e.g. Medic 12, Unit 664" />
+            </div>
+          </div>
+
+          <div>
+            <label for="message">Customization Requests *</label>
+            <textarea id="message" name="message" required placeholder="Department name, vehicle model, unit number, colors, markings, and details you'd like replicated. Reference photos can be emailed to us after you submit."></textarea>
+          </div>
+
+          <div class="what-next"><strong>What happens next?</strong>We'll review your submission and reply within 1–2 business days. Reference photos can be sent by email.</div>
+
+          <button type="submit" class="btn btn-red" style="align-self:flex-start;">
+            Submit Build Request
+          </button>
+          <div class="form-error" id="formError" role="alert">Something went wrong and your request wasn't sent. Please try again, or email us directly at preferredcustoms@email.com.</div>
+
+          <div class="form-success" id="formSuccess" role="status">
+            Request received! We'll get back to you within 1–2 business days.
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer>
+  <div class="footer-brand">Preferred <span>Customs</span></div>
+  <p>Handcrafted Custom Model Emergency Vehicles &nbsp;·&nbsp; Hilliard, Ohio</p>
+  <p>Independent model builder, not affiliated with any fire or police department.</p>
+  <p style="margin-top:.75rem;">
+    Ships Nationwide &nbsp;·&nbsp; Deposit via PayPal &nbsp;·&nbsp; preferredcustoms@email.com
+  </p>
+  <p style="margin-top:.6rem;">
+    <!-- TODO: replace YOURSHOPNAME -->
+    <a href="https://www.etsy.com/shop/YOURSHOPNAME" target="_blank" rel="noopener">Etsy Shop</a>
+    &nbsp;·&nbsp;
+    <a href="#gallery">Gallery</a>
+    &nbsp;·&nbsp;
+    <a href="#contact">Request a Build</a>
+  </p>
+</footer>
+
+<!-- ═══════════════ LIGHTBOX ═══════════════ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <div class="lightbox-img-wrap">
+    <button class="lb-arrow" id="lbPrev" aria-label="Previous">&#8592;</button>
+    <img id="lightboxImg" src="" alt="" />
+    <button class="lb-arrow" id="lbNext" aria-label="Next">&#8594;</button>
+  </div>
+  <p class="lb-caption" id="lbCaption"></p>
+  <div class="lb-views" id="lbViews"></div>
+  <p class="lb-counter"  id="lbCounter"></p>
+  <button class="lb-close" id="lbClose" aria-label="Close photo viewer">&#x2715; Close</button>
+</div>
+
+<!-- ═══════════════ SCRIPT ═══════════════ -->
+<script>
+  /* ── Mobile nav ── */
+  const toggle   = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    toggle.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', false);
+    });
+  });
+
+  /* ── Gallery filter ── */
+  const filterBtns   = document.querySelectorAll('.filter-btn');
+  const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed','false'); });
+      btn.classList.add('active'); btn.setAttribute('aria-pressed','true');
+      const f = btn.dataset.filter;
+      galleryItems.forEach(item =>
+        item.classList.toggle('hidden', f !== 'all' && item.dataset.category !== f)
+      );
+      rebuildVisible();
+    });
+  });
+
+  /* ── Lightbox ── */
+  let visible = [], cur = 0, lastFocus = null;
+
+  function rebuildVisible() {
+    visible = galleryItems.filter(i => !i.classList.contains('hidden'));
+  }
+  rebuildVisible();
+
+  function showLightbox(idx) {
+    cur = (idx + visible.length) % visible.length;
+    const item = visible[cur];
+    const imgs = Array.from(item.querySelectorAll('img'));
+    const img  = imgs[0];
+    lastFocus = document.activeElement;
+
+    const views = document.getElementById('lbViews');
+    views.innerHTML = '';
+
+    function setView(i) {
+      const im = imgs[i];
+      document.getElementById('lightboxImg').src = im.src;
+      document.getElementById('lightboxImg').alt = im.alt;
+      views.querySelectorAll('.view-btn').forEach((b, k) => b.classList.toggle('active', k === i));
+    }
+
+    if (imgs.length > 1) {
+      imgs.forEach((im, i) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'view-btn';
+        b.textContent = im.dataset.label || ('View ' + (i + 1));
+        b.addEventListener('click', () => setView(i));
+        views.appendChild(b);
+      });
+    }
+    setView(0);
+
+    document.getElementById('lbCaption').textContent = item.dataset.caption || img.alt;
+    document.getElementById('lbCounter').textContent = `${cur + 1} / ${visible.length}`;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('lbClose').focus();
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+
+  galleryItems.forEach(item => {
+    item.setAttribute('tabindex', '0');
+    item.setAttribute('role', 'button');
+    item.setAttribute('aria-label', 'Enlarge photo: ' + (item.dataset.caption || ''));
+    item.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); }
+    });
+    item.addEventListener('click', () => {
+      rebuildVisible();
+      const idx = visible.indexOf(item);
+      if (idx >= 0) showLightbox(idx);
+    });
+  });
+
+  document.getElementById('lbClose').addEventListener('click', closeLightbox);
+  document.getElementById('lbPrev').addEventListener('click', () => showLightbox(cur - 1));
+  document.getElementById('lbNext').addEventListener('click', () => showLightbox(cur + 1));
+  document.getElementById('lightbox').addEventListener('click', e => {
+    if (e.target === document.getElementById('lightbox')) closeLightbox();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'Escape')     closeLightbox();
+    if (e.key === 'ArrowLeft')  showLightbox(cur - 1);
+    if (e.key === 'ArrowRight') showLightbox(cur + 1);
+  });
+
+  /* ── Smooth scroll ── */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+
+  /* ── Contact form (Formspree AJAX) ── */
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    document.getElementById('formError').style.display = 'none';
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.reset();
+        document.getElementById('formSuccess').style.display = 'block';
+        btn.style.display = 'none';
+      } else {
+        btn.textContent = 'Try Again';
+        btn.disabled = false;
+        document.getElementById('formError').style.display = 'block';
+      }
+    } catch {
+      btn.textContent = 'Try Again';
+      btn.disabled = false;
+      document.getElementById('formError').style.display = 'block';
+    }
+  });
+</script>
+
+</body>
+</html>

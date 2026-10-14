@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git --version)",
+      "Bash(curl --version)",
+      "Bash(curl -sL https://github.com/cli/cli/releases/download/v2.67.0/gh_2.67.0_macOS_amd64.tar.gz -o /tmp/gh.tar.gz)",
+      "Bash(tar -xzf /tmp/gh.tar.gz -C /tmp)",
+      "Bash(sudo mv:*)",
+      "Bash(gh --version)",
+      "Bash(curl -L https://github.com/cli/cli/releases/download/v2.67.0/gh_2.67.0_macOS_arm64.tar.gz -o /tmp/gh.tar.gz)",
+      "Read(//private/tmp/**)",
+      "Bash(curl -sI https://github.com/cli/cli/releases/latest)",
+      "Bash(curl -sL \"https://api.github.com/repos/cli/cli/releases/latest\")",
+      "Bash(python3 -c \"import sys,json; r=json.load\\(sys.stdin\\); [print\\(a[''''name''''], a[''''browser_download_url'''']\\) for a in r[''''assets'''']]\")",
+      "Bash(curl -L \"https://github.com/cli/cli/releases/download/v2.89.0/gh_2.89.0_macOS_arm64.zip\" -o /tmp/gh.zip)",
+      "Read(//tmp/**)",
+      "Bash(unzip -q /tmp/gh.zip -d /tmp/gh_install)",
+      "Bash(mkdir -p ~/bin)",
+      "Bash(mv /tmp/gh_install/gh_2.89.0_macOS_arm64/bin/gh ~/bin/gh)",
+      "Bash(~/bin/gh --version)",
+      "Bash(~/bin/gh auth:*)"
+    ]
+  }
+}
